@@ -1,6 +1,7 @@
 package org.moniti.core;
 
 import org.moniti.core.commands.cc;
+import org.moniti.core.commands.radio;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -30,6 +31,7 @@ public final class Core extends JavaPlugin {
         // Create an instance of each command class and register it.
         // All commands must be defined in plugin.yml
         getCommand("core").setExecutor(new cc());
+        getCommand("radio").setExecutor(new radio(this));
     }
 
     /**
