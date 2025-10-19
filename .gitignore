@@ -1,0 +1,30 @@
+# Maven build directory
+target/
+
+# Generated artifacts from the shade plugin
+dependency-reduced-pom.xml
+
+# Log files
+*.log
+*.err
+
+# Annotation processing target directory
+/out/
+
+# Project-specific settings files (modules, etc.)
+*.iml
+*.iws
+*.ipr
+
+# VS Code
+.vscode/
+
+# IntelliJ IDEA
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows thumbnail database
+Thumbs.db
+

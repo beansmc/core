@@ -1,0 +1,10 @@
+name: core
+version: '1.0-SNAPSHOT'
+main: org.moniti.core.Core
+api-version: '1.21'
+authors: [ Beans-mc devs ]
+description: The main Beans-mc server core plugin.
+website: https://github.com/beansmc/core
+commands:
+  core:
+    description: The main command for the core plugin.
