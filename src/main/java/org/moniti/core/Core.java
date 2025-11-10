@@ -13,14 +13,14 @@ public final class Core extends JavaPlugin {
         // Plugin startup logic
         instance = this;
 
-        log.info("Core (`org.moniti.core`) has started!");
+        io.log.info("Core (`org.moniti.core`) has started!");
         registerCommands();
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        log.info("Core (`org.moniti.core`) has shut down.");
+        io.log.info("Core (`org.moniti.core`) has shut down.");
     }
 
     /**

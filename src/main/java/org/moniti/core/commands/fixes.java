@@ -35,7 +35,7 @@ public class fixes {
      * Registers all command executors with the server.
      */
     public void registerAll() {
-        log.info("Registering " + commandExecutors.size() + " fix/utility commands...");
+        io.log.info("Registering " + commandExecutors.size() + " fix/utility commands...");
         for (Map.Entry<String, CommandExecutor> entry : commandExecutors.entrySet()) {
             String commandName = entry.getKey();
             CommandExecutor executor = entry.getValue();
@@ -43,7 +43,7 @@ public class fixes {
             // Register the executor for the command defined in plugin.yml
             command.register(plugin, commandName, executor);
 
-            log.info("    - Registered /" + commandName);
+            io.log.info("    - Registered /" + commandName);
         }
     }
 }
