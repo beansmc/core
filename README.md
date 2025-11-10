@@ -57,8 +57,6 @@ To play with this `core-{VERSION}.jar` file drag it into a [Paper](https://paper
 
 [`fix/fly.java`](./src/main/java/org/moniti/core/fix/fly.java) - The `/flyspeed` command
 
-[`utils/log.java`](./src/main/java/org/moniti/core/utils/log.java) - The logging API
-
 [`utils/command.java`](./src/main/java/org/moniti/core/utils/command.java) - The command API
 
 [`commands/cc.java`](./src/main/java/org/moniti/core/commands/cc.java) - The `/core` command
