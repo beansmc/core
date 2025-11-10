@@ -6,7 +6,7 @@
 
     <groupId>org.moniti</groupId>
     <artifactId>core</artifactId>
-    <version>0.1.2-alpha.3</version>
+    <version>0.2.4-alpha.3</version>
     <packaging>jar</packaging>
 
     <name>core</name>

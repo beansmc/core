@@ -1,5 +1,5 @@
 name: core
-version: '0.1.2-alpha.4'
+version: '0.2.4-alpha.3'
 main: org.moniti.core.Core
 api-version: '1.21'
 authors: [ Beans-mc devs ]
@@ -8,5 +8,9 @@ website: https://github.com/beansmc/core
 commands:
   core:
     description: The main command for the core plugin.
-  radio:
-    description: A configurable in-game radio that plays random discs when wanted.
+  flyspeed:
+    description: Sets the player's current fly speed (1-10).
+    permission: core.command.flyspeed
+  msg:
+    description: Privately message another player.
+    aliases: [tell, w]

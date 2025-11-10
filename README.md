@@ -20,6 +20,9 @@ To play with this `core-{VERSION}.jar` file drag it into a [Paper](https://paper
 ---
 
 ## Commands
+> [!IMPORTANT]
+> The `/radio` command doesn't currently work properly. Please do not try and use it. For this reason it is disabled in the [`Core.java` file](./src/main/java/org/moniti/core/Core.java). 
+
 - `/core` - The main command.
 ```
 <br><br><shadow:black>                     <dark_gray>---</dark_gray> <gray>/</gray><gradient:#F70E4D:#F12760>Core</gradient> <dark_gray>---</dark_gray> </shadow><br>       The main <shadow:black><gradient:#F95A22:#FFA200>Beans</gradient><gray>-</gray><color:#D4DDE0>m</color><color:#dead50>c</color></shadow> server <shadow:black><gradient:#F70E4D:#F12760>Core</gradient></shadow> plugin.<br>                    <shadow:black> <dark_gray>------------</dark_gray> </shadow><br><shadow:black>                   <gray>/</gray><gradient:#F70E4D:#F12760>Core</gradient> help <gray>{page} </shadow><br><shadow:black>                <gray>/</gray><gradient:#F70E4D:#F12760>Core</gradient> player <gray>{player} </shadow><br><br>
@@ -35,3 +38,33 @@ To play with this `core-{VERSION}.jar` file drag it into a [Paper](https://paper
 <br><br><shadow:black>           <dark_gray>---</dark_gray> <gray>/</gray><gradient:#F70E4D:#F12760>Core</gradient> player <gray>{player}</gray> <dark_gray>---</dark_gray> </shadow><br><shadow:black>                     <yellow><player_name></yellow> </shadow><br><br>                     <player_hp><red>♥</red><br>                  <player_location><blue>✈</blue><br><br>         <shadow:black> <dark_gray>---------------------------</dark_gray> </shadow><br><br><br>
 ```
 
+- `/msg {player} {message}` - Sends a private message to another player on the server.
+- `/flyspeed {speed}` - Sets a custom flying speed for the player when flying.
+
+---
+
+## Internal documentation
+### Packages
+`org.moniti.core` - ID of the plugin
+
+`org.moniti.core.commands` - The package of all commands in the plugin
+
+`org.moniti.core.utils` - An internal utilities API for the rest of the plugin to use as a package
+
+`org.moniti.core.fix` - A smaller, custom version of commands from EssentialsX in a package
+### Files
+[`Core.java`](./src/main/java/org/moniti/core/Core.java) - The main file
+
+[`fix/fly.java`](./src/main/java/org/moniti/core/fix/fly.java) - The `/flyspeed` command
+
+[`utils/log.java`](./src/main/java/org/moniti/core/utils/log.java) - The logging API
+
+[`utils/command.java`](./src/main/java/org/moniti/core/utils/command.java) - The command API
+
+[`commands/cc.java`](./src/main/java/org/moniti/core/commands/cc.java) - The `/core` command
+
+[`commands/msg.java`](./src/main/java/org/moniti/core/commands/msg.java) - The `/msg` command
+
+[`commands/radio.java`](./src/main/java/org/moniti/core/commands/radio.java) - The `/radio` command (BROKEN)
+
+[`commands/fixes.java`](./src/main/java/org/moniti/core/commands/fixes.java) - The `org.moniti.core.fix` package's commands
