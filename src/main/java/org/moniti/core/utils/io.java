@@ -32,6 +32,22 @@ public final class io {
         throw new UnsupportedOperationException("This is a utility class and cannot be instantiated.");
     }
 
+    public static final class locale {
+        private locale() {
+            throw new UnsupportedOperationException("This is a utility class and cannot be instantiated.");
+        }
+
+        /**
+         * Retrieves a localized message string from the active language file using a key.
+         * @param key The message key (e.g., "org.moniti.core.prefix").
+         * @return The localized message string, or a fallback if the key is missing.
+         */
+        @SuppressWarnings("unused")
+        public static String getMsg(String key) {
+            return Core.getInstance().getLangManager().getMessage(key);
+        }
+    }
+
     public enum inputType {
         ANVIL,
         CHAT

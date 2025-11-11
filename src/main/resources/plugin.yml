@@ -1,5 +1,5 @@
 name: core
-version: '0.2.6-alpha.5'
+version: '0.2.7-alpha.8'
 main: org.moniti.core.Core
 api-version: '1.21'
 authors: [ Beans-mc devs ]

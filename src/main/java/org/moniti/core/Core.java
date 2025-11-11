@@ -5,13 +5,25 @@ import org.moniti.core.commands.*;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.File;
+
 public final class Core extends JavaPlugin {
     private static Core instance;
+    private localeManager langManager;
 
     @Override
     public void onEnable() {
         // Plugin startup logic
         instance = this;
+
+        File dataFolder = this.getDataFolder();
+        if (!dataFolder.exists()) {
+            if (!dataFolder.mkdirs()) {
+                io.log.severe("Failed to create main plugin data folder! File I/O will fail.");
+            }
+        }
+
+        this.langManager = new localeManager(this);
 
         io.log.info("Core (`org.moniti.core`) has started!");
         registerCommands();
@@ -46,5 +58,14 @@ public final class Core extends JavaPlugin {
     @SuppressWarnings("unused")
     public static Core getInstance() {
         return instance;
+    }
+
+    /**
+     * Global accessor for the Language Manager.
+     * @return The LangManager instance.
+     */
+    @SuppressWarnings("unused")
+    public localeManager getLangManager() {
+        return langManager;
     }
 }
